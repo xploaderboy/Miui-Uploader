@@ -38,7 +38,7 @@ from hachoir.parser import createParser
 from PIL import Image
 
 
-Client.on_message(pyrogram.filters.command(["upload", "upload@xploaderzxbot"]))
+Client.on_message(pyrogram.filters.command(["upload@xploaderzxbot"]))
 async def ddl_call_back(bot, update):
     logger.info(update)
     cb_data = update.data
