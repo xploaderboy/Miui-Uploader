@@ -1,26 +1,26 @@
 class Translation(object):
     START_TEXT = """Hello,
-This is a Telegram URL Upload Bot by @v_m_7_0_3 😇
+This is a Telegram URL Upload Bot for MemeUi_Mirror 😇
 
 <b>Please send me any direct download URL Link, i can upload to telegram as File/Video</b>
 
 /help for more details.. and more thing waiting for u there 😉
 
-No Support for this bot 🥲 •SED LYF•"""
+Tag @v_m_7_0_3 if any issues"""
     RENAME_403_ERR = "Sorry. You are not permitted to rename this file."
     ABS_TEXT = " Please don't be selfish."
     UPGRADE_TEXT = "Yea Lets Upgrade. But what will u upgrade 🤔"
-    FORMAT_SELECTION = "Select the desired format: <a href='{}'>file size might be approximate</a> \nIf you want to set custom thumbnail, send photo before or quickly after tapping on any of the below buttons.\nYou can use /deletethumbnail to delete the auto-generated thumbnail."
+    FORMAT_SELECTION = "Select the desired format from the buttons given below"
     SET_CUSTOM_USERNAME_PASSWORD = """If you want to download premium videos, provide in the following format:
 URL | filename | username | password"""
     NOYES_URL = "@robot URL detected. Please use https://shrtz.me/PtsVnf6 and get me a fast URL so that I can upload to Telegram, without me slowing down for other users."
     DOWNLOAD_START = "Downloading 4 U and Wasting My Data 😌"
-    UPLOAD_START = "Yea Boy Got It"
+    UPLOAD_START = "Setting Everything Up For Uploading \nPlease Wait"
     TRIM_START = "Starting Trimming ✂️🎞✂️. Plox Be Patient it's very slow 😁"
     RCHD_BOT_API_LIMIT = "size greater than maximum allowed size (50MB). Neverthless, trying to upload."
     RCHD_TG_API_LIMIT = "Downloaded in {} seconds.\nDetected File Size: {}\nSorry. But, I cannot upload files greater than 2.0GB due to Telegram API limitations."
     AFTER_SUCCESSFUL_UPLOAD_MSG = "Happy Now ? 😉🙃😇"
-    AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS = "Downloaded in {} seconds. \nSawadika Happy Now 😉🙃 \nUploaded in {} seconds."
+    AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS = "Downloaded in {} seconds. \nHappy Now ? 😉🙃 \nUploaded in {} seconds."
     NOT_AUTH_USER_TEXT = "GTFO PLOX. ONLY FOR AUTHORISED USERS"
     NOT_AUTH_USER_TEXT_FILE_SIZE = "Detected File Size: {}. Free Users can only upload: {}\nPlease /upgrade your subscription.\nIf you think this is a bug, please contact <a href='https://telegram.dog/ThankTelegram'>@v_m_7_0_3</a>"
     SAVED_CUSTOM_THUMB_NAIL = "Custom video / file thumbnail saved. This image will be used in the video / file."
@@ -41,11 +41,6 @@ Expires on: 31/12/2069
     
 •••
 Use /upload command with link to Upload URL.
-
-•••
-Use can use any picture as Thumbnail.
-Send picture and reply that with /generatecustomthumbnail for using custom thumbnail.
-Use /deletethumbnail to delete the saved thumbnail.
 
 •••
 You can download youtube videos by giving link. It will automatically download.
@@ -84,7 +79,6 @@ DFile  - Give File without Screenshots
 Use /commands for all simple commands list
 
 ----------------------------------------------------
-Send /me to know current plan details
 Now what are u waiting for 😐🤨
 """
     REPLY_TO_DOC_GET_LINK = "Reply to a Telegram media to get High Speed Direct Download Link"
