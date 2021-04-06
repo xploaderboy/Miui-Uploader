@@ -32,12 +32,11 @@ from hachoir.parser import createParser
 from PIL import Image
 
 
-@pyrogram.Client.on_message(pyrogram.filters.command(["rename", "rename@xploaderzxbot"]))
+@pyrogram.Client.on_message(pyrogram.filters.command(["rename@xploaderzxbot"]))
 async def rename_doc(bot, update):
     if update.from_user.id in Config.BANNED_USERS:
         await update.reply_text("You are B A N N E D 🤣🤣🤣🤣")
         return
-    TRChatBase(update.from_user.id, update.text, "rename")
     if (" " in update.text) and (update.reply_to_message is not None):
         cmd, file_name = update.text.split(" ", 1)
         description = Translation.CUSTOM_CAPTION_UL_FILE
