@@ -31,7 +31,7 @@ from helper_funcs.display_progress import progress_for_pyrogram, humanbytes
 from pyrogram.types import ReplyKeyboardMarkup, InlineKeyboardMarkup, InlineKeyboardButton
 
 
-@pyrogram.Client.on_message(pyrogram.filters.command(["unzip", "unzip@xploaderzxbot"]))
+@pyrogram.Client.on_message(pyrogram.filters.command(["unzip@xploaderzxbot"]))
 async def unzip(bot, update):
     if update.from_user.id in Config.BANNED_USERS:
         await update.reply_text("You are B A N N E D 🤣🤣🤣🤣")
