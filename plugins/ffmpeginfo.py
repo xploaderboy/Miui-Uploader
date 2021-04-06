@@ -31,9 +31,8 @@ from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 
 
-@pyrogram.Client.on_message(pyrogram.filters.command(["trim", "trim@xploaderzxbot"]))
+@pyrogram.Client.on_message(pyrogram.filters.command(["trim@xploaderzxbot"]))
 async def trim(bot, update):
-    TRChatBase(update.from_user.id, update.text, "trim")
     saved_file_path = Config.DOWNLOAD_LOCATION + "/" + str(update.from_user.id) + ".FFMpegRoBot.mkv"
     if os.path.exists(saved_file_path):
         a = await bot.send_message(
@@ -140,9 +139,8 @@ async def trim(bot, update):
         )
 
 
-@pyrogram.Client.on_message(pyrogram.filters.command(["storageinfo", "storageinfo@xploaderzxbot"]))
+@pyrogram.Client.on_message(pyrogram.filters.command(["storageinfo@xploaderzxbot"]))
 async def storage_info(bot, update):
-    TRChatBase(update.from_user.id, update.text, "storageinfo")
     saved_file_path = Config.DOWNLOAD_LOCATION + "/" + str(update.from_user.id) + ".FFMpegRoBot.mkv"
     if os.path.exists(saved_file_path):
         metadata = extractMetadata(createParser(saved_file_path))
@@ -163,9 +161,8 @@ async def storage_info(bot, update):
         )
 
 
-@pyrogram.Client.on_message(pyrogram.filters.command(["clearmedia", "clearmedia@xploaderzxbot"]))
+@pyrogram.Client.on_message(pyrogram.filters.command(["clearmedia@xploaderzxbot"]))
 async def clear_media(bot, update):
-    TRChatBase(update.from_user.id, update.text, "clearffmpegmedia")
     saved_file_path = Config.DOWNLOAD_LOCATION + "/" + str(update.from_user.id) + ".FFMpegRoBot.mkv"
     if os.path.exists(saved_file_path):
         os.remove(saved_file_path)
@@ -176,9 +173,8 @@ async def clear_media(bot, update):
     )
 
 
-@pyrogram.Client.on_message(pyrogram.filters.command(["downloadmedia", "downloadmedia@xploaderzxbot"]))
+@pyrogram.Client.on_message(pyrogram.filters.command(["downloadmedia@xploaderzxbot"]))
 async def download_media(bot, update):
-    TRChatBase(update.from_user.id, update.text, "downloadmedia")
     saved_file_path = Config.DOWNLOAD_LOCATION + "/" + str(update.from_user.id) + ".FFMpegRoBot.mkv"
     if not os.path.exists(saved_file_path):
         a = await bot.send_message(
