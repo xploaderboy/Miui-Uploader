@@ -75,9 +75,23 @@ async def convert_to_video(bot, update):
             metadata = extractMetadata(createParser(the_real_download_location))
             if metadata.has("duration"):
                 duration = metadata.get('duration').seconds
-            thumb_image_path = Config.DOWNLOAD_LOCATION + "/" + str(update.from_user.id) + ".jpg"
-            if not os.path.exists(thumb_image_path):
-                thumb_image_path = None
+            thumbnail = Config.DEF_THUMB_NAIL_VID_S
+            thumbnail_image = Config.DEF_THUMB_NAIL_VID_S
+            if "thumbnail" in response_json:
+                if response_json["thumbnail"] is not None:
+                thumbnail = response_json["thumbnail"]
+                thumbnail_image = response_json["thumbnail"]
+                logger.info(f"Thumbnail :{thumbnail_image}")
+        thumb_image_path = DownLoadFile(
+            thumbnail_image,
+            Config.DOWNLOAD_LOCATION + "/" +
+            str(update.from_user.id) + ".webp",
+            Config.CHUNK_SIZE,
+            None,  # bot,
+            Translation.DOWNLOAD_START,
+            update.message_id,
+            update.chat.id
+        )
             else:
                 metadata = extractMetadata(createParser(thumb_image_path))
                 if metadata.has("width"):
