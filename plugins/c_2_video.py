@@ -87,6 +87,8 @@ async def convert_to_video(bot, update):
             update.message_id,
             update.chat.id
         )
+            if not os.path.exists(thumb_image_path):
+                thumb_image_path = None
             else:
                 metadata = extractMetadata(createParser(thumb_image_path))
                 if metadata.has("width"):
