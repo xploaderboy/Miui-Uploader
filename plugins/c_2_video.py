@@ -77,12 +77,7 @@ async def convert_to_video(bot, update):
                 duration = metadata.get('duration').seconds
             thumbnail = Config.DEF_THUMB_NAIL_VID_S
             thumbnail_image = Config.DEF_THUMB_NAIL_VID_S
-            if "thumbnail" in response_json:
-                if response_json["thumbnail"] is not None:
-                thumbnail = response_json["thumbnail"]
-                thumbnail_image = response_json["thumbnail"]
-                logger.info(f"Thumbnail :{thumbnail_image}")
-        thumb_image_path = DownLoadFile(
+            thumb_image_path = DownLoadFile(
             thumbnail_image,
             Config.DOWNLOAD_LOCATION + "/" +
             str(update.from_user.id) + ".webp",
