@@ -150,7 +150,7 @@ async def echo(bot, update):
             reply_to_message_id=update.message_id,
             parse_mode="html",
             disable_web_page_preview=True
-            logger.info(f"Error:{error_message}")
+            logger.info(error_message)
         )
         return False
     if t_response:
